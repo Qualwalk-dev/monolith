@@ -1,0 +1,15 @@
+### need to move db props here
+spring:
+  datasource:
+    maximum-pool-size: ${max_pool_size}
+    password: admin
+    url: jdbc:postgresql://${db_url}:${db_port}/${db_name}
+    username: postgres
+    hikari:
+      maximum-pool-size: ${max_pool_size}
+      pool-name: ${pool_name}
+      connection-init-sql: SELECT 1
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
